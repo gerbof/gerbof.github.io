@@ -1,0 +1,27 @@
+# Important: all URLs must have a trailing slash!
+- text: Introduccion
+  url: /css3/introduccion/
+- text: ¿Por qué usar CSS?
+  url: /css3/why_use/
+- text: ¿Cómo funciona CSS?
+  url: /css3/getting_started/how_works/
+  subitems:
+    - text: Selectores
+      url: /css3/getting_started/selector/
+    - text: Textos
+      url: /css3/getting_started/textos/
+    - text: Contenido
+      url: /css3/getting_started/content/
+    - text: Listas
+      url: /css3/getting_started/lists/
+    - text: Cajas
+      url: /css3/getting_started/boxes/
+    - text: Medios
+      url: /css3/getting_started/media/
+- text: Accesibilidad
+  url: /css3/accesibility/how_accesibility/
+  subitems:
+    - text: Pautas de Accesibilidad al Contenido en la Web
+      url: /css3/accesibility/techniques/pautas/
+    - text: Técnicas de Accesibilidad
+      url: /css3/accesibility/techniques/techniques/

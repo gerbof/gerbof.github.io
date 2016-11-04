@@ -1,0 +1,19 @@
+# Important: all URLs must have a trailing slash!
+- text: Introduccion
+  url: /html5/introduccion/
+- text: Estructura Global
+  url: /html5/struct/estructura/
+- text: Estructura del cuerpo
+  url: /html5/struct/estructura_cuerpo/
+- text: Elementos basicos
+  url: /html5/elements/elementos/
+  subitems:
+    - text: Recomendaciones de codigo
+      url: /html5/elements/elementsExample/
+- text: Nuevos elementos
+  url: /html5/elements/new_elements/
+- text: Formularios
+  url: /html5/forms/formularios/
+  subitems:
+    - text: Recomendaciones de codigo
+      url: /html5/forms/formsExample/

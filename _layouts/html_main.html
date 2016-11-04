@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<section id="main" class="wrapper style3" role="main">
+    <header class="major">
+        <h2><abbr title="Lenguaje de Marcado de Hipertexto versión 5">HTML5</abbr></h2>
+        <p>El lenguaje de marcado que se usa para estructurar páginas web</p>
+    </header>
+    <div class="container">
+      <div id="breadcrumbs">
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+        {% for page_html in site.html5 %}
+          {% capture page_url %}{{ page_html.url }}{% endcapture %}
+          {% if page_url == page.url %}
+            {% capture page_name %}{{ page_html.title }}{% endcapture %}
+          {% endif %}
+        {% endfor %}
+        <span class="hidden-content">Este es el camino que va transitando: </span><span>Usted est&aacute; aqu&iacute; </span><em class="fa fa-angle-double-right"></em>
+        <a href="/" title="Enlace que dirije a la página de inicio del sitio.">Inicio</a>
+        {% for crumb in crumbs offset: 1 %}
+          {% if forloop.last %}
+            <em class="fa fa-angle-double-right"></em> {{ page_name }}
+          {% else %}
+            {% case crumb %}
+              {% when 'html5' %}
+                <em class="fa fa-angle-double-right"></em> <a href="{{ site.baseurl }}/html5/introduccion" title="Enlace que dirije a la introducción de las buenas prácticas con HTML5.">{{ crumb | replace:'_',' ' | remove:'.html' | upcase }}</a>
+              {% when 'forms' %}
+                <em class="fa fa-angle-double-right"></em> <a href="{{ site.baseurl }}/html5/forms/formularios" title="Enlace que dirije a las buenas prácticas sobre formularios en HTML5.">Formularios</a>
+              {% when 'elements' %}
+                <em class="fa fa-angle-double-right"></em> <a href="#" title="Este enlace es solo decorativo.">Elementos</a>
+              {% when 'struct' %}
+                <em class="fa fa-angle-double-right"></em> <a href="#" title="Este enlace es solo decorativo.">Estructura</a>
+              {% else %}
+                <em class="fa fa-angle-double-right"></em> <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'_',' ' | remove:'.html' | upcase }}</a>
+            {% endcase %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="row">
+        <aside tabindex="2" role="complementary">
+          <div role="navigation" aria-labelledby="leftnavheading">
+            <h3 id="leftnavheading">Contenido</h3>
+            {% include /aside_menu.html nav=site.data.aside %}
+          </div>
+        </aside>
+          <div class="8u skel-cell-important">
+            <div id="mainContent" tabindex="1">
+              {{ content }}
+            </div>
+          </div>
+      </div>
+    </div>
+</section>

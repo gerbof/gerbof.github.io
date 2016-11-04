@@ -1,0 +1,10 @@
+{% assign navurl = page.url | remove: 'index.html' %}
+<ul class="alt">
+  {% for item in include.nav %}
+    <li><a href="{{ item.url }}" title="Enlace que dirije en ésta misma página al contenido de {{ item.text }}"><em class="fa fa-caret-right"></em> {{ item.text }}</a>
+      {% if item.subitems %}
+        {% include aside_menu.html nav=item.subitems %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

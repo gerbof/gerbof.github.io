@@ -1,0 +1,31 @@
+<head>
+    <title>{% if page.title %}{{ site.title }}: {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" lang="es" content="DCU, UX, html5, css, usabilidad, accesibilidad">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="Alexis German Bof">
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="http://www.frikipandi.com/wp-content/themes/blog-tecnologia/js/selectivizr-min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/myStyle.css" />
+    {% if page.title == "Formulario de contacto." %}
+      <script src="{{ site.baseUrl }}/js/jquery.min.js"></script>
+      <script src="{{ site.baseUrl }}/js/attrvalidate.jquery.js"></script>
+      <script src="{{ site.baseUrl }}/js/validation.js"></script>
+    {% endif %}
+
+    {% if page.title == "Recomendaciones para elementos" %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/flickity.css" media="screen" />
+      <script src="{{ site.baseUrl }}/js/jquery.min.js"></script>
+      <script src="{{ site.baseUrl }}/js/flickity.pkgd.min.js"></script>
+      <script src="{{ site.baseUrl }}/js/initializeCarousel.js"></script>
+    {% endif %}
+</head>

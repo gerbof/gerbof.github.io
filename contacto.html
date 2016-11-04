@@ -1,0 +1,31 @@
+---
+layout: default
+title: Formulario de contacto.
+---
+
+<!-- Banner -->
+<section id="bannerContact" role="region" aria-label="Banner Contacto">
+    <div class="inner">
+        <h2>Escríbeme</h2>
+        <p>¿Tenés algun problema o sugerencia que hacerme? Te invito a completar el formulario y que nos contactemos</p>
+    </div>
+</section>
+<!-- Main -->
+<section id="mainContent" class="wrapper style3" role="main">
+    <div class="container">
+      <h3>Formulario de contacto</h3>
+      <!-- Hidden message to show if contact is successful. -->
+      <div id="submit-success" class="hidden-content" role="alert" tabindex="-1">
+        <p>El mensaje fue enviado. Te contesto a la brevedad.</p>
+      </div>
+      <form id ="contacto" name="contacto" action="#" autocomplete="off">
+        <p>Los campos marcados con asterisco (*) es necesario que los completes.</p>
+        <label for="nombre">Nombre <abbr title="campo obligatorio">(*)</abbr></label><input type="text" id="nombre" required aria-required="true" name="Nombre" placeholder="Decime como te llamás, por ejemplo: Juan Perez" title="¿Cuál es tu nombre?" data-error-msg="¿Cuál es tu nombre?"/>
+        <label for="email">Correo electrónico <abbr title="campo obligatorio">(*)</abbr></label><input type="email" id="email" required aria-required="true" name="Correo electrónico" placeholder="Decime tu correo electrónico asi te respondo por ejemplo: xxxx@gmail.com" title="¿Cuál es tú dirección de correo electrónico?" data-error-msg="¿Cuál es tú dirección de correo electrónico?"/>
+        <label for="motivo">Motivo del mensaje <abbr title="campo obligatorio">(*)</abbr></label><input id="motivo" type="text" required aria-required="true" name="Motivo del mensaje" placeholder="Decime cuál es el motivo para contactarnos, por ejemplo: te quiero felicitar por el sitio..." title="¿Por qué me querés escribir?" data-error-msg="¿Por qué me querés escribir?"/>
+        <label for="mensaje">Mensaje</label><textarea id="mensaje" name="Mensaje" placeholder="Aquí comienza tu mensaje" title="¿Cuál es tú mensaje?"></textarea>
+        <input type="submit" value="Enviar mensaje" class="button" name="Botón enviar"/>
+        <input id="resetButton" type="reset" value="Borrar campos" class="reset" name="Botón reset"/>
+      </form>
+    </div>
+</section>

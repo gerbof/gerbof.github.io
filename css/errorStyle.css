@@ -1,0 +1,38 @@
+body{
+	font-family:'Helvetica Neue',Arial,Helvetica, Verdana, sans-serif;
+	margin:0;
+	padding:0;
+	background:url("../images/error.jpg") no-repeat center bottom #eee;
+	background-size:100% auto;
+}
+
+h2 {
+  color: #000;
+}
+/* === page content === */
+#mainContent{min-height:100%}
+#parallax_wrapper {left: 50%; height: 58.125em;}
+.container{margin:0 auto;width:60.000em;}
+#wrapper .container{margin:1.563em auto}
+#main-content{position:relative;margin-bottom:6.250em}
+
+/* === Media Query === */
+@media screen and (min-width: 768px){
+	#error #parallax_wrapper{width:120.000em;min-height:100%;position:relative;margin-left:-960px;}
+	#error #content{width:610px;margin:auto;color:#fff;text-align:center;z-index:2;position:absolute;top:10%;right:0;bottom:0;left:0;}
+	#error #content .button{margin-top:2.188em;cursor:pointer;position:relative;z-index:99999;}
+	#error #content h1{color: #d87009;font-family:"MuseoSans-700",Helvetica,Arial,Verdana,sans-serif;font-size:3.438em;font-weight:normal;line-height:65px;text-shadow: inset 0px 1px 3px rgba(0,0,0,0.85)}
+	#error #content p{color:#333;font-family:HelveticaNeue,Arial,Verdana,sans-serif;font-size:1.125em;font-weight:normal;width:32.000em;margin:0 auto;line-height:26px;text-shadow: inset 0px 1px 3px rgba(0,0,0,0.85)}
+	#error.error404 #content{width:38.125em;z-index:9999;}
+	#error.error404 h1{margin:0 auto;padding:1.250em 0 1.250em}
+	#error.error404 p{width:27.500em}
+	#error.error404 p a{color:#004a89;font-weight:bold;text-decoration:underline}
+	#error.error404 .scene{position:absolute;bottom:-0px;display:block;width:1920px}
+
+	#error #wrapper{padding:0;overflow:hidden;position:relative}}
+
+@media screen and (max-width: 767px){
+	#error #content{background:#fff;padding:1.250em;margin:1.250em;border:1px solid #ccc;text-align:center;border-radius:5px;box-shadow:0px 1px 0px rgba(0,0,0,0.05)}
+	#error #content h1{color: #d87009;font-size:1.500em;line-height:28px;margin:0 0 10px}
+	#error #content p{font-size:0.875em;line-height:18px;color:#666;margin:0 0 10px}
+}

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<section id="main" class="wrapper style3" role="main">
+    <header class="major">
+        <h2><abbr title="Hojas de estilo en cascada">CSS</abbr></h2>
+        <p>La tecnolog&iacute;a desarrollada para separar la presentaci&oacute;n de la estructura <abbr title="Lenguaje de Marcado de Hipertexto">HTML</abbr></p>
+    </header>
+    <div class="container">
+      <div id="breadcrumbs">
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+        {% for page_html in site.css3 %}
+          {% capture page_url %}{{ page_html.url }}{% endcapture %}
+          {% if page_url == page.url %}
+            {% capture page_name %}{{ page_html.title }}{% endcapture %}
+          {% endif %}
+        {% endfor %}
+        <span class="hidden-content">Este es el camino que va transitando: </span><span>Usted est&aacute; aqu&iacute; </span><em class="fa fa-angle-double-right"></em>
+        <a href="/" title="Enlace que dirije a la página de inicio del sitio.">Inicio</a>
+        {% for crumb in crumbs offset: 1 %}
+          {% if forloop.last %}
+            <em class="fa fa-angle-double-right"></em> {{ page_name }}
+          {% else %}
+            {% case crumb %}
+              {% when 'css3' %}
+                <em class="fa fa-angle-double-right"></em> <a href="{{ site.baseurl }}/css3/introduccion" title="Enlace que dirije a la introducción de las buenas prácticas con hojas de estilo.">{{ crumb | replace:'_',' ' | remove:'.html' | upcase }}</a>
+              {% when 'accesibility' %}
+                <em class="fa fa-angle-double-right"></em> <a href="{{ site.baseurl }}/css3/accesibility/how_accesibility" title="Enlace que dirije al contenido de Accesibilidad en hojas de estilo.">Accesibilidad</a>
+              {% when 'techniques' %}
+                <em class="fa fa-angle-double-right"></em> <a href="#" title="Este enlace es solo decorativo.">Pautas y t&eacute;cnicas</a>
+              {% when 'getting_started' %}
+                <em class="fa fa-angle-double-right"></em> <a href="{{ site.baseurl }}/css3/getting_started/how_works" title="Enlace que dirije al funcionamiento de las hojas de estilo.">Funcionamiento</a>
+              {% else %}
+                <em class="fa fa-angle-double-right"></em> <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'_',' ' | remove:'.html' | upcase }}</a>
+            {% endcase %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="row">
+          <aside tabindex="2">
+            <div role="navigation" aria-labelledby="leftnavheading">
+                <h3 id="leftnavheading">Contenido</h3>
+                {% include /aside_menu.html nav=site.data.css_aside %}
+            </div>
+          </aside>
+          <div class="8u skel-cell-important">
+            <div id="mainContent" tabindex="1">
+              {{ content }}
+            </div>
+          </div>
+      </div>
+    </div>
+</section>

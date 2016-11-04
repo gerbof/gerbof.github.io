@@ -1,0 +1,59 @@
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row double">
+            <div class="6u">
+                <div class="row collapse-at-2">
+                    <div class="6u">
+                        <h4>Contenido <abbr title="Lenguaje de Marcado de Hipertexto versión 5">HTML5</abbr></h4>
+                        <ul class="alt">
+                          {% assign items = site.html5 | sort: 'post' %}
+                          {% for post in items %}
+                              <li><a href="{{ post.url }}" title="Enlace que dirije al contenido de {{ post.title }} correspondiente a HTML">{{ post.title }} en <abbr title="Lenguaje de Marcado de Hipertexto">HTML</abbr></a></li>
+                          {% endfor %}
+                          <li><span class="findelista">(Fin de la lista de opciones correspondiente a HTML versión 5)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="6u">
+                        <h4>Contenido <abbr title="Hojas de estilo en cascada">CSS</abbr></h4>
+                        <ul class="alt">
+                          {% assign items = site.css3 | sort: 'post' %}
+                          {% for post in items %}
+                              <li><a href="{{ post.url }}" title="Enlace que dirije al contenido de {{ post.title }} correspondiente a CSS">{{ post.title }} en <abbr title="Hojas de estilo en cascada">CSS</abbr></a></li>
+                          {% endfor %}
+                          <li><span class="findelista">(Fin de la lista de opciones correspondiente a CSS)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="7u">
+                <h4>Sitio validado</h4>
+                <p>Este sitio se encuentra validado y cumple con las normas de la <abbr title="Consorcio WWW">W3C</abbr> y la <abbr title="Pautas de Accesibilidad para el Contenido Web 2.0">WCAG 2.0</abbr>.</p>
+                <ul class="icons">
+                    <li>
+                      <a href="http://jigsaw.w3.org/css-validator/" title="Enlace que dirije al validador online de la W3C para hojas de estilo">
+                        <img src="{{ site.baseUrl }}/images/vcss-blue.gif" alt="Sitio CSS Válido" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://validator.w3.org/" title="Enlace que dirije al validador online de la W3C para HTML">
+                        <img src="{{ site.baseUrl }}/images/vhtml5-blue.png" alt="Sitio HTML válido" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explicación del Nivel Doble-A de Conformidad">
+                        <img src="{{ site.baseUrl }}/images/wcag2AA-blue.png" alt="Conformidad con el Nivel Doble-A de las Directrices de Accesibilidad al Contenido Web 2.0" />
+                      </a>
+                    </li>
+                </ul>
+          </div>
+          <ul class="copyright">
+              <li>&copy; {{ site.time | date: '%Y' }} Todos los derechos reservados.</li>
+              <li><address>Diseño y elaboración: Alexis German Bof</address></li>
+              <li>Realizado con: <a href="https://jekyllrb.com/" title="Enlace que dirije al sitio del generador de páginas estáticas Jekyll">Jekyll</a></li>
+              <li><span class="findelista">(Fin de derechos)</span></li>
+          </ul>
+    </div>
+  </div>
+</footer>
