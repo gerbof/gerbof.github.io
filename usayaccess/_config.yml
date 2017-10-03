@@ -2,7 +2,7 @@
 title: Diseño centrado en el usuario
 email:
 description: Este sitio ofrece las buenas prácticas de desarrollo Web orientadas a la accesibilidad y la usabilidad.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/usayaccess/" # the subpath of your site, e.g. /blog/
 url: "http://dcuproject.com" # the base hostname & protocol for your site
 twitter_username:
 github_username:
